@@ -37,22 +37,9 @@ export class AppComponent implements OnInit {
   }
 
   itemDropped(event:any) {
-    console.log(this.sourceImages[0]);    
-
     this.images.push(this.sourceImages[event.previousIndex]);
 
-    console.log(this.images)
-    //  let image = new Image();
-    //   image.src = "https://www.gravatar.com/avatar/0ca4c6bc08e59c34de7fc39e09de8dbe?s=32&amp;d=identicon&amp;r=PG";
-    //      image.width = 50;
-
-    //  const div = this.renderer.createElement('div');
-    //  this.renderer.addClass(div, 'example-box');
-    //  this.renderer.setAttribute(div,'cdkDragBoundary','.example-boundary')
-    //  this.renderer.setAttribute(div,'cdkDrag','')
-
-    // div.appendChild(image);
-    // this.imageDrop.nativeElement.appendChild(div);
+    
   }
 
   rotateRight(index){     

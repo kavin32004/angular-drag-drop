@@ -1,0 +1,27 @@
+<div cdkDropListGroup>
+	<div cdkDropListOrientation="horizontal" class="example-list">
+		<div cdkDropList (cdkDropListDropped)="itemDropped($event)">
+			<img cdkDrag style="padding:10px" *ngFor="let img of sourceImages" src="{{img}}" alt="" width="32" height="32" >
+
+  </div>
+		</div>
+		<div class="example-boundary" #imageDrop>
+			<div cdkDrag *ngFor="let img of images; let i = index;" cdkDragBoundary=".example-boundary" class="example-box">
+				
+					<img id="{{i}}" src="{{img}}" alt="" width="100"  >
+
+ 
+					<div  style="display: flex;
+    flex-direction: column;">
+						<button mat-mini-fab (click)="delete(i)">
+    <mat-icon>delete</mat-icon>
+ </button>
+<button mat-mini-fab (click)="rotateLeft(i)">
+						<mat-icon>rotate_left</mat-icon>
+</button>
+<button mat-mini-fab (click)="rotateRight(i)">
+						<mat-icon>rotate_right</mat-icon>
+</button>
+					</div>
+				</div>
+			</div>
